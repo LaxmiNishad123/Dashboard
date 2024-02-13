@@ -9,11 +9,8 @@ st.set_page_config(page_title="Vrinda Store Sales Dashboard",
                    layout="wide"
 )
 
-# Path to the CSV file
-csv_file_path = "C:\\Users\\LAXMI NISHAD\\OneDrive\\Desktop\\Dashboard\\Sales data.csv"
-
-# Read the CSV file into a DataFrame
-df = pd.read_csv(csv_file_path)
+# Read the CSV file 
+df = pd.read_csv("Sales data.csv)
 
 st.title(":orange[Vrinda Store Anuual Report 2022] :shopping_bags: :bar_chart:")
 st.markdown("Vrinda store wants to create an annual sales report for 2022.  So that,Vrinda can understand their customers and grow more sales in 2023.")
