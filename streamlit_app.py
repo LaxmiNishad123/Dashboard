@@ -21,26 +21,18 @@ month = st.sidebar.multiselect(
         default=df["Month"].unique()
     )
 
-category = st.sidebar.multiselect(
+category = st.sidebar.selectbox(
         "Select the Category:",
         options=df["Category"].unique(),
-        default=df["Category"].unique()
     )
 
-gender = st.sidebar.multiselect(
-        "Select the Gender:",
-        options=df["Gender"].unique(),
-        default=df["Gender"].unique()
-    )
-
-channel = st.sidebar.multiselect(
+channel = st.sidebar.selectbox(
         "Select the Channel:",
         options=df["Channel"].unique(),
-        default=df["Channel"].unique()
     )
 
 df_selection = df.query(
-        "Month == @month & Category == @category & Gender == @gender & Channel == @channel"
+        "Month == @month & Category == @category & Channel == @channel"
     )
 
 tab1, tab2 = st.tabs([":clipboard: Sales data", ":bar_chart: Dashboard"])
