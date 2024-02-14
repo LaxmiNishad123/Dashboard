@@ -24,7 +24,7 @@ month = st.sidebar.multiselect(
 channel = st.sidebar.multiselect(
         "Select the Channel:",
         options=df["Channel"].unique(),
-        defalut=df["Channel"].unique()
+        default=df["Channel"].unique()
     )
 
 category = st.sidebar.selectbox(
